@@ -46,10 +46,6 @@
     <Compile Include="TabMenu.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TabCollection.cs" />
-    <Compile Include="TabItem.cs">
-      <SubType>Component</SubType>
-    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

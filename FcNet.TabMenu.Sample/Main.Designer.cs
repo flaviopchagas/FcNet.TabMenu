@@ -28,47 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabItem1 = new FcNet.TabMenu.TabItem();
-            this.tabItem2 = new FcNet.TabMenu.TabItem();
-            this.tabItem3 = new FcNet.TabMenu.TabItem();
             this.tabMenu1 = new FcNet.TabMenu.TabMenu();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tabMenu1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tabItem1
-            // 
-            this.tabItem1.Location = new System.Drawing.Point(0, 0);
-            this.tabItem1.Name = "tabItem1";
-            this.tabItem1.Size = new System.Drawing.Size(75, 23);
-            this.tabItem1.TabIndex = 0;
-            this.tabItem1.Text = "tabItem1";
-            this.tabItem1.UseVisualStyleBackColor = true;
-            // 
-            // tabItem2
-            // 
-            this.tabItem2.Location = new System.Drawing.Point(0, 0);
-            this.tabItem2.Name = "tabItem2";
-            this.tabItem2.Size = new System.Drawing.Size(75, 23);
-            this.tabItem2.TabIndex = 0;
-            this.tabItem2.Text = "tabItem2";
-            this.tabItem2.UseVisualStyleBackColor = true;
-            // 
-            // tabItem3
-            // 
-            this.tabItem3.Location = new System.Drawing.Point(0, 0);
-            this.tabItem3.Name = "tabItem3";
-            this.tabItem3.Size = new System.Drawing.Size(75, 23);
-            this.tabItem3.TabIndex = 0;
-            this.tabItem3.Text = "tabItem3";
-            this.tabItem3.UseVisualStyleBackColor = true;
             // 
             // tabMenu1
             // 
-            this.tabMenu1.Location = new System.Drawing.Point(116, 62);
+            this.tabMenu1.Controls.Add(this.button1);
+            this.tabMenu1.Controls.Add(this.button2);
+            this.tabMenu1.Location = new System.Drawing.Point(337, 75);
             this.tabMenu1.Name = "tabMenu1";
             this.tabMenu1.Size = new System.Drawing.Size(200, 100);
             this.tabMenu1.TabIndex = 0;
-            this.tabMenu1.TabMargin = new System.Windows.Forms.Padding(3);
-            this.tabMenu1.TabSize = new System.Drawing.Size(75, 23);
+            this.tabMenu1.TabItems.Add(this.button1);
+            this.tabMenu1.TabItems.Add(this.button2);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(84, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -78,15 +71,16 @@
             this.Controls.Add(this.tabMenu1);
             this.Name = "Main";
             this.Text = "FcNet.TabMenu Sample";
+            this.tabMenu1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private TabItem tabItem1;
-        private TabItem tabItem2;
-        private TabItem tabItem3;
+
         private TabMenu tabMenu1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

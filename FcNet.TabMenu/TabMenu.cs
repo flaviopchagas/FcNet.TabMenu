@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
@@ -7,13 +9,16 @@ namespace FcNet.TabMenu
 {
     public partial class TabMenu : FlowLayoutPanel
     {
-        public TabMenu() { }
+        public TabMenu()
+        {
+            TabItems.CollectionChanged += TabItems_CollectionChanged;
+        }
 
-        private TabCollection mTabs = new TabCollection();
+        private ObservableCollection<Button> _tabItems = new ObservableCollection<Button>();
 
         [Category("TabMenu"), Description("TabItems"), MergableProperty(false), Bindable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
-        public TabCollection TabItems { get { return mTabs; } }
+        public ObservableCollection<Button> TabItems { get { return _tabItems; } }
 
         [Category("TabMenu"), Description("TabSize"), MergableProperty(false), Bindable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
@@ -23,62 +28,39 @@ namespace FcNet.TabMenu
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
         public Padding TabMargin { get; set; } = new Padding(3);
 
-
-        protected override void OnBindingContextChanged(EventArgs e)
+        protected override void OnControlRemoved(ControlEventArgs e)
         {
-            base.OnBindingContextChanged(e);
-            //if (Tabs != null)
-            //{
-            //    foreach (TabItem tab in Tabs)
-            //    {
-            //        //Button bt = new Button()
-            //        //{
-            //        //    Text = tab.Text,
-            //        //    Name = "Foo"
-            //        //};
-
-            //        Controls.Add(tab);
-            //    }
-            //}
+            TabItems.CollectionChanged -= TabItems_CollectionChanged;
+            try
+            {
+                base.OnControlRemoved(e);
+                TabItems.Remove((Button)e.Control);
+            }
+            catch (Exception) { }
+            finally { TabItems.CollectionChanged += TabItems_CollectionChanged; }
         }
-
 
         protected override void OnControlAdded(ControlEventArgs e)
         {
-            base.OnControlAdded(e);
-
-        }
-        protected override void OnParentChanged(EventArgs e)
-        {
-            base.OnParentChanged(e);
-
-        }
-
-        protected override void OnParentBindingContextChanged(EventArgs e)
-        {
-            base.OnParentBindingContextChanged(e);
-
-
-
+            TabItems.CollectionChanged -= TabItems_CollectionChanged;
+            try
+            {
+                base.OnControlAdded(e);
+                TabItems.Add((Button)e.Control);
+            }
+            catch (Exception)
+            {
+                Controls.Remove(e.Control);
+                MessageBox.Show("Invalid control. Only Button is acceptable.");
+            }
+            finally { TabItems.CollectionChanged += TabItems_CollectionChanged; }
         }
 
-        protected override void OnLayout(LayoutEventArgs levent)
+        private void TabItems_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
-            base.OnLayout(levent);
-
-
-
-        }
-
-        protected override void OnPaint(PaintEventArgs pevent)
-        {
-            //    //if (Tabs != null)
-            //    //{
-            //    //    foreach (Button tab in Tabs)
-            //    //    {
-            //    //        this.Controls.Add(tab);
-            //    //    }
-            //    //}
+            if (e.Action == NotifyCollectionChangedAction.Add) { Controls.Add((Control)e.NewItems[0]); }
+            else if (e.Action == NotifyCollectionChangedAction.Remove) { Controls.Remove((Control)e.NewItems[0]); }
         }
     }
 }
+
