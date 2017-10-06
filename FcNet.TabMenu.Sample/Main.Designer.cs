@@ -28,19 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabMenu1 = new FcNet.TabMenu.TabMenu();
             this.tabItem1 = new FcNet.TabMenu.TabItem();
+            this.tabItem2 = new FcNet.TabMenu.TabItem();
+            this.tabItem3 = new FcNet.TabMenu.TabItem();
+            this.tabMenu1 = new FcNet.TabMenu.TabMenu();
             this.SuspendLayout();
-            // 
-            // tabMenu1
-            // 
-            this.tabMenu1.Location = new System.Drawing.Point(154, 79);
-            this.tabMenu1.Name = "tabMenu1";
-            this.tabMenu1.Size = new System.Drawing.Size(200, 100);
-            this.tabMenu1.TabIndex = 0;
-            this.tabMenu1.TabMargin = new System.Windows.Forms.Padding(3);
-            this.tabMenu1.Tabs.Add(this.tabItem1);
-            this.tabMenu1.TabSize = new System.Drawing.Size(75, 23);
             // 
             // tabItem1
             // 
@@ -50,6 +42,33 @@
             this.tabItem1.TabIndex = 0;
             this.tabItem1.Text = "tabItem1";
             this.tabItem1.UseVisualStyleBackColor = true;
+            // 
+            // tabItem2
+            // 
+            this.tabItem2.Location = new System.Drawing.Point(0, 0);
+            this.tabItem2.Name = "tabItem2";
+            this.tabItem2.Size = new System.Drawing.Size(75, 23);
+            this.tabItem2.TabIndex = 0;
+            this.tabItem2.Text = "tabItem2";
+            this.tabItem2.UseVisualStyleBackColor = true;
+            // 
+            // tabItem3
+            // 
+            this.tabItem3.Location = new System.Drawing.Point(0, 0);
+            this.tabItem3.Name = "tabItem3";
+            this.tabItem3.Size = new System.Drawing.Size(75, 23);
+            this.tabItem3.TabIndex = 0;
+            this.tabItem3.Text = "tabItem3";
+            this.tabItem3.UseVisualStyleBackColor = true;
+            // 
+            // tabMenu1
+            // 
+            this.tabMenu1.Location = new System.Drawing.Point(116, 62);
+            this.tabMenu1.Name = "tabMenu1";
+            this.tabMenu1.Size = new System.Drawing.Size(200, 100);
+            this.tabMenu1.TabIndex = 0;
+            this.tabMenu1.TabMargin = new System.Windows.Forms.Padding(3);
+            this.tabMenu1.TabSize = new System.Drawing.Size(75, 23);
             // 
             // Main
             // 
@@ -64,9 +83,10 @@
         }
 
         #endregion
-
-        private TabMenu tabMenu1;
         private TabItem tabItem1;
+        private TabItem tabItem2;
+        private TabItem tabItem3;
+        private TabMenu tabMenu1;
     }
 }
 
