@@ -1,0 +1,29 @@
+﻿{
+  "tabMenuSample": {
+    "BackColor": "#3C8DBC",
+    "ForeColor": "#000000",
+    "Font": "Microsoft Sans Serif; 9; 0; 0",
+    "BackgroundImage": "",
+    "BackgroundImageLayout": "",
+    "BorderStyle": "None",
+    "Size": "200; 50",
+    "Dock": "Top",
+    "Padding": "0; 0; 0; 0",
+    "MouseOverBackColor": "#357CA5",
+    "MouseLeaveBackColor": "#357CA5",
+    "MouseOverForeColor": "#357CA5",
+    "MouseLeaveForeColor": "#357CA5"
+  },
+  "tabMenuSample Button:over": {
+    "MouseOverBackColor": "#357CA5",
+    "MouseLeaveBackColor": "#357CA5"
+  },
+  "tabMenuSample Button:leave": {
+    "MouseOverBackColor": "#357CA5",
+    "MouseLeaveBackColor": "#357CA5"
+  },
+  "tabMenuSample Button:active": {
+    "MouseOverBackColor": "#357CA5",
+    "MouseLeaveBackColor": "#357CA5"
+  }
+}

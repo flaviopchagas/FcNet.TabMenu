@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FcNet.FormStyleJson;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace FcNet.TabMenu.Sample
         public Main()
         {
             InitializeComponent();
+            ThemeEngine.ApplyTheme(this, @".\Theme\default.json");
         }
     }
 }

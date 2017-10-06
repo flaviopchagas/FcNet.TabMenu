@@ -28,22 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabMenu1 = new FcNet.TabMenu.TabMenu();
+            this.tabMenuSample = new FcNet.TabMenu.TabMenu();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.tabMenu1.SuspendLayout();
+            this.tabMenuSample.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabMenu1
+            // tabMenuSample
             // 
-            this.tabMenu1.Controls.Add(this.button1);
-            this.tabMenu1.Controls.Add(this.button2);
-            this.tabMenu1.Location = new System.Drawing.Point(337, 75);
-            this.tabMenu1.Name = "tabMenu1";
-            this.tabMenu1.Size = new System.Drawing.Size(200, 100);
-            this.tabMenu1.TabIndex = 0;
-            this.tabMenu1.TabItems.Add(this.button1);
-            this.tabMenu1.TabItems.Add(this.button2);
+            this.tabMenuSample.Controls.Add(this.button1);
+            this.tabMenuSample.Controls.Add(this.button2);
+            this.tabMenuSample.Location = new System.Drawing.Point(337, 75);
+            this.tabMenuSample.Name = "tabMenuSample";
+            this.tabMenuSample.Size = new System.Drawing.Size(200, 100);
+            this.tabMenuSample.TabIndex = 0;
+            this.tabMenuSample.TabItems.Add(this.button1);
+            this.tabMenuSample.TabItems.Add(this.button2);
+            this.tabMenuSample.TabItems.Add(this.button1);
+            this.tabMenuSample.TabItems.Add(this.button2);
             // 
             // button1
             // 
@@ -68,17 +70,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 305);
-            this.Controls.Add(this.tabMenu1);
+            this.Controls.Add(this.tabMenuSample);
             this.Name = "Main";
             this.Text = "FcNet.TabMenu Sample";
-            this.tabMenu1.ResumeLayout(false);
+            this.tabMenuSample.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private TabMenu tabMenu1;
+        private TabMenu tabMenuSample;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
     }
