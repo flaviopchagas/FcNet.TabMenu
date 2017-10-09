@@ -9,21 +9,13 @@
     "Size": "200; 50",
     "Dock": "Top",
     "Padding": "0; 0; 0; 0",
-    "MouseOverBackColor": "#357CA5",
-    "MouseLeaveBackColor": "#357CA5",
-    "MouseOverForeColor": "#357CA5",
-    "MouseLeaveForeColor": "#357CA5"
-  },
-  "tabMenuSample Button:over": {
-    "MouseOverBackColor": "#357CA5",
-    "MouseLeaveBackColor": "#357CA5"
-  },
-  "tabMenuSample Button:leave": {
-    "MouseOverBackColor": "#357CA5",
-    "MouseLeaveBackColor": "#357CA5"
-  },
-  "tabMenuSample Button:active": {
-    "MouseOverBackColor": "#357CA5",
-    "MouseLeaveBackColor": "#357CA5"
+
+    "TabBackColor": "#3C8DBC",
+    "TabForeColor": "#FFFFFF",
+    "TabMouseOverBackColor": "#357CA5",
+    "TabMouseDownBackColor": "Transparent",
+    "TabActiveBackColor": "#ECF0F5",
+    "TabActiveForeColor": "#000000",
+    "TabActiveMouseOverBackColor": "#ECF0F5"
   }
 }
